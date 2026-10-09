@@ -1,0 +1,8 @@
+show me a summary of all uncomitted changes
+commit and push the changes with a descriptive message
+create a feature branch called ui-improvements and switch to it.
+push this branch and create a PR with a summary of changes
+review the pull request and merge into main branch
+switch back to main branch and delete the ui-improvements branch both locally and remotely as i am done with the UI changes
+plz look at the issue 2 reported and fix the problem
+commit and push this fix, then close issue 2
