@@ -21,6 +21,9 @@ const POLICY_LINKS = [
   },
 ];
 
+const CONTACT_DESCRIPTION =
+  "Questions or feedback? Reach out to our support team and we'll get back to you soon.";
+
 const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
@@ -183,10 +186,19 @@ const Footer = () => {
               ))}
               <Link
                 to="/contact"
-                className="group relative hover:text-white transition-colors duration-300"
+                aria-describedby="tooltip-contact"
+                className="group relative hover:text-white focus-visible:text-white outline-none transition-colors duration-300"
               >
                 <span className="relative z-10">Contact Us</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <span
+                  id="tooltip-contact"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 z-20 px-4 py-3 rounded-xl bg-gray-800 border border-gray-700/50 shadow-xl text-xs leading-relaxed text-gray-300 text-center opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-visible:opacity-100 group-focus-visible:visible transition-all duration-300"
+                >
+                  {CONTACT_DESCRIPTION}
+                  <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1.5 w-3 h-3 rotate-45 bg-gray-800 border-r border-b border-gray-700/50"></span>
+                </span>
               </Link>
             </div>
             <div className="text-center md:text-right">
